@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coo_eat">
         <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".ScrapActivity"
             android:exported="true" />
         <activity
