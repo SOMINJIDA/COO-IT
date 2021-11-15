@@ -10,8 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:src="@drawable/header"
-        />
+        android:src="@drawable/header" />
 
     <ImageView
         android:layout_width="70dp"

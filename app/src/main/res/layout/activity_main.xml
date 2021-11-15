@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_cook"
         android:layout_width="212dp"
         android:layout_height="54dp"
         android:layout_marginLeft="98dp"

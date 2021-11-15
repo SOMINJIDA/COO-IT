@@ -12,6 +12,8 @@
         <activity
             android:name=".DetailActivity"
             android:exported="true" />
+            android:name=".RecipeActivity"
+            android:exported="false" />
         <activity
             android:name=".ScrapActivity"
             android:exported="true" />
