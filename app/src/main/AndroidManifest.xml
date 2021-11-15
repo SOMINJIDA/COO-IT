@@ -12,8 +12,9 @@
         <activity
             android:name=".DetailActivity"
             android:exported="true" />
+        <activity
             android:name=".RecipeActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ScrapActivity"
             android:exported="true" />
