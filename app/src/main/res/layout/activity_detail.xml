@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="429dp"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/soup" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/back" />
+                <!--                todo: header가 달라붙는 스크롤뷰 구현-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="1"
+                    android:text="된장찌개"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="24dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="0.1"
+                    app:srcCompat="@drawable/bookmark" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="53dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_rounded_corner_rectangle"
+                android:gravity="center"
+                android:text="국/찌개"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="48dp"
+                android:background="@color/gray_1" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="390dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:text="재료"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="47dp"
+                android:gravity="center"
+                android:text="고구마죽 고구마 100g(2/3개), 설탕 2g(1/3작은술), 찹쌀가루 3g(2/3작은술),물 200ml(1컵), 잣 8g(8알)" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="390dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/textViewW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="43dp"
+                android:gravity="center"
+                android:text="조리방법"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:scaleType="fitStart"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="58dp"
+                android:gravity="center"
+                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:scaleType="fitStart"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="58dp"
+                android:gravity="center"
+                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:scaleType="fitStart"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="58dp"
+                android:gravity="center"
+                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

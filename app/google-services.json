@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "419273016797",
+    "project_id": "coo-it",
+    "storage_bucket": "coo-it.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419273016797:android:42d0ee87d825f9449aa234",
+        "android_client_info": {
+          "package_name": "com.example.coo_eat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419273016797-5jku3nl88mt9t91otr84rq6lu97ob20v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXeFQIalW_eLb_tXuryz34RXPx7icLcx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419273016797-5jku3nl88mt9t91otr84rq6lu97ob20v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
