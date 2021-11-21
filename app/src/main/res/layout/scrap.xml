@@ -23,7 +23,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/backButton" />
+        android:src="@drawable/backbutton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +39,6 @@
         android:textStyle="bold" />
 
 <!--    리사이클러뷰 넣어야함-->
-    <androidx.recyclerview.widget.RecyclerView
 
     <ImageView
         android:id="@+id/imageButton"
