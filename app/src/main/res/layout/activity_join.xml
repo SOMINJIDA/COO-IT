@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="34dp"
         android:layout_marginLeft="160dp"
         android:text="JOIN"
         android:textSize="35sp"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:layout_marginLeft="60dp"
         android:text="Email Address"
         />
@@ -84,7 +84,7 @@
         android:layout_width="240dp"
         android:layout_height="58dp"
         android:layout_marginLeft="84dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="54dp"
         android:backgroundTint="@color/gray"
         android:textColor="@color/black"
         android:text="회원가입" />

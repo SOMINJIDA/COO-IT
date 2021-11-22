@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 var mPosition = 0
-class recipeAdapter(private val context: Context, private val ItemList: ArrayList<recipeData>):RecyclerView.Adapter<recipeAdapter.ItemViewHolder>() {
+class recipeAdapter(private val context: Context, private val ItemList: ArrayList<RecipeData>):RecyclerView.Adapter<recipeAdapter.ItemViewHolder>() {
 
     fun setPosition(position: Int) {
         mPosition = position
@@ -20,7 +20,7 @@ class recipeAdapter(private val context: Context, private val ItemList: ArrayLis
         private val foodName = itemView.findViewById<TextView>(R.id.foodName)
         private val foodCategory = itemView.findViewById<TextView>(R.id.foodCategory)
 
-        fun bind(data: recipeData) {
+        fun bind(data: RecipeData) {
             //View에 데이터 세팅
             foodPhoto.setImageURI(data.photo)
             foodName.text = data.name
