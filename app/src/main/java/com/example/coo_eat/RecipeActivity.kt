@@ -11,10 +11,10 @@ val uri1 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/soup
 val uri2 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/noodle")
 val uri3 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/maratang")
 
-var ItemList = arrayListOf<recipeData>(
-    recipeData("된장찌개", "#국/찌개", uri1),
-    recipeData("라면", "#국/찌개", uri2),
-    recipeData("마라탕", "#국/찌개", uri3),
+var ItemList = arrayListOf<RecipeData>(
+    RecipeData("된장찌개", "#국/찌개", uri1),
+    RecipeData("라면", "#국/찌개", uri2),
+    RecipeData("마라탕", "#국/찌개", uri3),
 )
 
 class RecipeActivity : AppCompatActivity() {
