@@ -34,9 +34,21 @@ class RecipeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // 국 찌개 버튼 클릭
+        // 카테고리별 버튼 클릭
         btn_recipe_soup.setOnClickListener{
             val intent= Intent(this, Category1Activity::class.java)
+            startActivity(intent)
+        }
+        btn_recipe_rice.setOnClickListener{
+            val intent= Intent(this, Category2Activity::class.java)
+            startActivity(intent)
+        }
+        btn_recipe_vegan.setOnClickListener{
+            val intent= Intent(this, Category3Activity::class.java)
+            startActivity(intent)
+        }
+        btn_recipe_snack.setOnClickListener{
+            val intent= Intent(this, Category4Activity::class.java)
             startActivity(intent)
         }
         val mAdapter = recipeAdapter(this, ItemList)

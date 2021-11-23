@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFDF5"
-    tools:context=".Category1Activity">
+    tools:context=".Category2Activity">
 
     <ImageView
-        android:id="@+id/category1_header"
+        android:id="@+id/category2_header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:scaleType="fitXY"
         android:src="@drawable/header" />
     <ImageButton
-        android:id="@+id/btn_category1_back"
+        android:id="@+id/btn_category2_back"
         android:layout_width="13dp"
         android:layout_height="22dp"
         android:layout_marginLeft="15dp"
@@ -23,14 +23,14 @@
         android:background="@android:color/transparent"
         android:src="@drawable/backbutton" />
     <LinearLayout
-        android:id="@+id/category1_btn_collect"
+        android:id="@+id/category2_btn_collect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:layout_below="@+id/category1_header">
+        android:layout_below="@+id/category2_header">
         <Button
-            android:id="@+id/btn_category1_soup"
+            android:id="@+id/btn_category2_soup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="국/찌개"
@@ -38,10 +38,10 @@
             android:backgroundTint="#FFFDF5"
             android:background="@android:color/transparent"
             android:textStyle="bold"
-            android:textColor="#5F6E9C"
+            android:textColor="#c4c5c4"
             android:layout_marginLeft="10dp" />
         <Button
-            android:id="@+id/btn_category1_rice"
+            android:id="@+id/btn_category2_rice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="밥"
@@ -49,10 +49,10 @@
             android:backgroundTint="#FFFDF5"
             android:background="@android:color/transparent"
             android:textStyle="bold"
-            android:textColor="#c4c5c4"
+            android:textColor="#5F6E9C"
             android:layout_marginLeft="10dp" />
         <Button
-            android:id="@+id/btn_category1_vegan"
+            android:id="@+id/btn_category2_vegan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="반찬"
@@ -63,7 +63,7 @@
             android:textColor="#c4c5c4"
             android:layout_marginLeft="10dp" />
         <Button
-            android:id="@+id/btn_category1_snack"
+            android:id="@+id/btn_category2_snack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="후식"
@@ -74,21 +74,22 @@
             android:textColor="#c4c5c4"
             android:layout_marginLeft="20dp" />
     </LinearLayout>
+
     <ImageView
-        android:layout_below="@+id/category1_btn_collect"
         android:layout_width="120dp"
+        android:layout_marginLeft="107dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/category2_btn_collect"
         android:background="@android:color/transparent"
         android:src="@drawable/rectangle" />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/category1_btn_collect"
+        android:layout_below="@+id/category2_btn_collect"
         android:layout_marginTop="4dp"
         android:src="@drawable/category_line" />
 
     <ImageView
-        android:id="@+id/catefory_image"
         android:layout_width="200dp"
         android:layout_height="147dp"
         android:layout_alignParentStart="true"
@@ -115,7 +116,6 @@
         android:src="@drawable/scrap_vector" />
 
     <ImageView
-        android:id="@+id/catefory_image2"
         android:layout_width="200dp"
         android:layout_height="147dp"
         android:layout_alignParentStart="true"
