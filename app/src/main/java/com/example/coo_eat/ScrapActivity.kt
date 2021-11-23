@@ -16,5 +16,11 @@ class ScrapActivity : AppCompatActivity() {
             val intent = Intent(this, RecipeActivity::class.java)
             startActivity(intent)
         }
+
+        // 추천 레시피 버튼 클릭
+        btn_scrap_recipe.setOnClickListener {
+            val intent = Intent(this, RecipeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
