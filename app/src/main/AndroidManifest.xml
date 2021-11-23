@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coo_eat">
         <activity
+            android:name=".Category4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Activity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -20,25 +29,19 @@
         </activity>
         <activity
             android:name=".ScrapActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".JoinActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".RecipeActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Category1Activity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>
