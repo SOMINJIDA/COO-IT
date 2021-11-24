@@ -55,8 +55,8 @@
 
                 <ImageButton
                     android:id="@+id/imageView5"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
+                    android:layout_width="22dp"
+                    android:layout_height="25dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/button_selector" />
             </LinearLayout>
