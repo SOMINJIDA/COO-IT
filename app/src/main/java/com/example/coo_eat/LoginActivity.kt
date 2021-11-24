@@ -1,5 +1,6 @@
 package com.example.coo_eat
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -64,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (task.isSuccessful) {
 
-                    val pref = getSharedPreferences("pref",0)
+                    val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
                     val edit = pref.edit()  //수정모드
 
                     edit.putString("email",emailText)
@@ -80,7 +81,6 @@ class LoginActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
 
-//
                     } else {
                         // 로그인 실패
                         Log.w(TAG, "signInWithEmail:failure", task.exception)

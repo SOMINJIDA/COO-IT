@@ -3,6 +3,7 @@ package com.example.coo_eat
 import android.app.ActionBar
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -24,10 +25,15 @@ class IngredientActivity : AppCompatActivity() {
 
     val db = Firebase.firestore
     val TAG:String = "MainActivity : " //log출력을 위한 TAG
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient)
+
+        val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
+        pref.getString("email", "no email")
 
         btn_ingredient_back.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
