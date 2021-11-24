@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_ingredient.*
 import android.view.ViewGroup
 import android.graphics.Color
+import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
 import android.widget.Button
