@@ -15,5 +15,9 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this,RecipeActivity::class.java)
             startActivity(intent)
         }
+        btn_main_refrigerator.setOnClickListener{
+            val intent= Intent(this,IngredientActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
