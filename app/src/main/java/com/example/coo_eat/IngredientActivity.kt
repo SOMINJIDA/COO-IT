@@ -1,6 +1,7 @@
 package com.example.coo_eat
 
 import android.app.ActionBar
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -13,10 +14,15 @@ import android.view.Gravity
 import android.widget.Button
 
 import android.widget.TextView
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
 
 
 class IngredientActivity : AppCompatActivity() {
+
+    val db = Firebase.firestore
+    val TAG:String = "MainActivity : " //log출력을 위한 TAG
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +62,12 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
+
+//                    var getEmail = pref.getString("email","")
+//                    Log.d(TAG,getEmail.toString())
+                    db.collection("yyyy@gmail.com").document("ingredient").update("양파",true)
+                        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
                 }
                 else {
                     btn_check = false
