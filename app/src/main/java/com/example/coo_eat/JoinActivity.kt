@@ -50,7 +50,7 @@ class JoinActivity : AppCompatActivity() {
 
 
 
-            val data = hashMapOf("" to true) //문서 빈 데이터 넣기
+            val data = hashMapOf(".." to true) //문서 빈 데이터 넣기
 
 
             //신규사용자추가
