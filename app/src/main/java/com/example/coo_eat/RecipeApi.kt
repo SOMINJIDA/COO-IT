@@ -12,7 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory
 @RequiresApi(Build.VERSION_CODES.N)
 fun main() {
     val key : String = "cf8505a99bb545f8882c"
-    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/5"
+    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/1000"
     val xml : Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(url)
 
     xml.documentElement.normalize()
@@ -31,8 +31,14 @@ fun main() {
                 map.putIfAbsent(elem.attributes.item(j).nodeName, elem.attributes.item(j).nodeValue)
             }
 
-            println("${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
-            println("${elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent}")
+            val ingredients = elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent
+            val ingredientsArray = ingredients.split(" ")
+
+            for (h in 0..ingredientsArray.size - 1) {
+                if ("달걀" == ingredientsArray[h]) {
+                    println("${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
+                }
+            }
         }
     }
 }
