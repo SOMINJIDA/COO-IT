@@ -47,6 +47,9 @@
         <activity
             android:name=".Category1Activity"
             android:exported="true" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
