@@ -71,7 +71,6 @@ class LoginActivity : AppCompatActivity() {
                     edit.putString("email",emailText)
                     edit.apply()
 
-
                     //todo: 밑에 코드 세개 재료화면에 적용하기
                     db.collection(emailText).document("ingredient").update("양파",true)
                         .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
