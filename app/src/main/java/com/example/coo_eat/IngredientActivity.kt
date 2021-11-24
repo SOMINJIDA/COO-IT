@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_ingredient.*
 import android.view.ViewGroup
 import android.graphics.Color
+import android.util.TypedValue
 import android.view.Gravity
 import android.widget.Button
 
@@ -44,20 +45,21 @@ class IngredientActivity : AppCompatActivity() {
             )
             newButton.layoutParams = layoutParams
             layoutParams.setMargins(30, 0, 0, 0)
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             newButton.text = i
+
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
             dynamicHori.addView(newButton)
             vegetable_layout1.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
@@ -78,18 +80,18 @@ class IngredientActivity : AppCompatActivity() {
             layoutParams.setMargins(30, 5, 0, 0)
             newButton.text = i
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             dynamicHori.addView(newButton)
             vegetable_layout2.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
@@ -110,18 +112,18 @@ class IngredientActivity : AppCompatActivity() {
             layoutParams.setMargins(30, 5, 0, 0)
             newButton.text = i
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             dynamicHori.addView(newButton)
             vegetable_layout3.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
@@ -142,18 +144,18 @@ class IngredientActivity : AppCompatActivity() {
             layoutParams.setMargins(30, 5, 0, 0)
             newButton.text = i
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             dynamicHori.addView(newButton)
             vegetable_layout4.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
@@ -174,18 +176,18 @@ class IngredientActivity : AppCompatActivity() {
             layoutParams.setMargins(30, 5, 0, 0)
             newButton.text = i
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             dynamicHori.addView(newButton)
             meat_layout1.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
@@ -206,21 +208,148 @@ class IngredientActivity : AppCompatActivity() {
             layoutParams.setMargins(30, 5, 0, 0)
             newButton.text = i
             val dynamicHori = LinearLayout(this)
-            newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
             dynamicHori.addView(newButton)
             meat_layout2.addView(dynamicHori)
 
             newButton.setOnClickListener {
                 if (!btn_check) {
-                    newButton.setBackgroundColor(Color.rgb(95, 110, 156))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
                 }
                 else {
                     btn_check = false
-                    newButton.setBackgroundColor(Color.rgb(209, 208, 209))
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
                 }
             }
         }
 
+        // 가공식품 버튼 동적 생성 부분입니다......
+        val pro_food_layout1: LinearLayout = findViewById(R.id.btn_pro_food1)
+        var pro_food = mutableListOf<String>(
+            "참치캔", "스팸", "옥수수캔", "소시지"
+        )
+        for (i in pro_food) {
+            var btn_check = false
+            val newButton = Button(this)
+            val layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+            )
+            newButton.layoutParams = layoutParams
+            layoutParams.setMargins(30, 0, 0, 0)
+            newButton.text = i
+            val dynamicHori = LinearLayout(this)
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+            dynamicHori.addView(newButton)
+            pro_food_layout1.addView(dynamicHori)
+
+            newButton.setOnClickListener {
+                if (!btn_check) {
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
+                    btn_check = true
+                }
+                else {
+                    btn_check = false
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+                }
+            }
+        }
+
+        // 유제품 버튼 동적 생성 부분입니다......
+        val milk_layout1: LinearLayout = findViewById(R.id.btn_milk1)
+        var milk = mutableListOf<String>(
+            "참치캔", "스팸", "옥수수캔", "소시지"
+        )
+        for (i in milk) {
+            var btn_check = false
+            val newButton = Button(this)
+            val layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+            )
+            newButton.layoutParams = layoutParams
+            layoutParams.setMargins(30, 0, 0, 0)
+            newButton.text = i
+            val dynamicHori = LinearLayout(this)
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+            dynamicHori.addView(newButton)
+            milk_layout1.addView(dynamicHori)
+
+            newButton.setOnClickListener {
+                if (!btn_check) {
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
+                    btn_check = true
+                }
+                else {
+                    btn_check = false
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+                }
+            }
+        }
+
+        // 해산물 버튼 동적 생성 부분입니다......
+        val fish_layout1: LinearLayout = findViewById(R.id.btn_fish1)
+        var fish = mutableListOf<String>(
+            "새우", "낙지", "오징어", "문어"
+        )
+        for (i in fish) {
+            var btn_check = false
+            val newButton = Button(this)
+            val layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+            )
+            newButton.layoutParams = layoutParams
+            layoutParams.setMargins(30, 5, 0, 0)
+            newButton.text = i
+            val dynamicHori = LinearLayout(this)
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+            dynamicHori.addView(newButton)
+            fish_layout1.addView(dynamicHori)
+
+            newButton.setOnClickListener {
+                if (!btn_check) {
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
+                    btn_check = true
+                }
+                else {
+                    btn_check = false
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+                }
+            }
+        }
+
+        val fish_layout2: LinearLayout = findViewById(R.id.btn_fish2)
+        var fish2 = mutableListOf<String>(
+            "전복", "꽃게", "조개"
+        )
+        for (i in fish2) {
+            var btn_check = false
+            val newButton = Button(this)
+            val layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+            )
+            newButton.layoutParams = layoutParams
+            layoutParams.setMargins(30, 5, 0, 0)
+            newButton.text = i
+            val dynamicHori = LinearLayout(this)
+            newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+            dynamicHori.addView(newButton)
+            fish_layout2.addView(dynamicHori)
+
+            newButton.setOnClickListener {
+                if (!btn_check) {
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
+                    btn_check = true
+                }
+                else {
+                    btn_check = false
+                    newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
+                }
+            }
+        }
     }
+
 }
