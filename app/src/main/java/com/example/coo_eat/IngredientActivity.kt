@@ -33,7 +33,9 @@ class IngredientActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ingredient)
 
         val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
-        pref.getString("email", "no email")
+        val user_email = pref.getString("email", "no email")
+
+        Log.w(TAG, "email: " + user_email) //사용자 이메일 로그 출력
 
         btn_ingredient_back.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
