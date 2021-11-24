@@ -78,12 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_vegan_3"
-<<<<<<< HEAD
-                android:orientation="horizontal"></LinearLayout>
-=======
                 android:orientation="horizontal">
             </LinearLayout>
->>>>>>> 7a19ca65006a75bf0f788c86f09f50060993193e
             <TextView
                 android:id="@+id/ingredient_meat"
                 android:layout_below="@+id/btn_vegan_4"

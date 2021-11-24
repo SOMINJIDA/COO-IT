@@ -41,6 +41,7 @@
         android:textSize="15sp"
         android:background="@drawable/edittext_rounded_corner_rectangle"
         android:hint="    이메일을 입력하세요"
+        android:id="@+id/newEmail"
         />
 
     <TextView
@@ -59,6 +60,7 @@
         android:textSize="15sp"
         android:background="@drawable/edittext_rounded_corner_rectangle"
         android:hint="    비밀번호를 입력하세요"
+        android:id="@+id/newPassword"
         />
 
     <TextView
