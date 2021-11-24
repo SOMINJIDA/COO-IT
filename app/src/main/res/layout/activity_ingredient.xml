@@ -56,34 +56,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="버섯">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="마늘">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="양파">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="두부">
-                </Button>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/btn_vegan_2"
@@ -91,34 +63,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="감자">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="양상추">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="블루베리">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="사과">
-                </Button>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/btn_vegan_3"
@@ -126,70 +70,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="딸">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="토마토">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="콩나물">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="당근">
-                </Button>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/btn_vegan_4"
-                android:layout_below="@+id/btn_vegan_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="오이">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="고추">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="가지">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="호박">
-                </Button>
-            </LinearLayout>
+                android:layout_below="@+id/btn_vegan_3"
+                android:orientation="horizontal"></LinearLayout>
             <TextView
                 android:id="@+id/ingredient_meat"
                 android:layout_below="@+id/btn_vegan_4"
@@ -207,34 +95,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="달걀">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="돼지고기">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="닭고기">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="소고기">
-                </Button>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/btn_meat_2"
@@ -242,13 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="양고기">
-                </Button>
+
             </LinearLayout>
             <TextView
                 android:id="@+id/ingredient_pro_food"
@@ -267,34 +121,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="참치캔">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="스팸">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="옥수수캔">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="소시지">
-                </Button>
             </LinearLayout>
             <TextView
                 android:id="@+id/ingredient_milk"
@@ -313,34 +139,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="요거트">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="우유">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="치즈">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="버터">
-                </Button>
             </LinearLayout>
             <TextView
                 android:id="@+id/ingredient_fish"
@@ -359,34 +157,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="새우">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="낙지">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="오징어">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="문어">
-                </Button>
+
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/btn_fish2"
@@ -394,27 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="전복">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="꽃게">
-                </Button>
-                <Button
-                    android:layout_marginLeft="12dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#d1d0d1"
-                    android:text="조개">
-                </Button>
+
             </LinearLayout>
             <Button
                 android:id="@+id/btn_ingredient_complete"
