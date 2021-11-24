@@ -39,11 +39,12 @@
                 android:textColor="#24434C"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/ingredient_veg"
-                android:layout_below="@+id/ingredient_title"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
+                android:layout_below="@+id/ingredient_title"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:text="야채/과일"
