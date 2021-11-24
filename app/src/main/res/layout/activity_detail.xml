@@ -53,12 +53,12 @@
                     android:text="된장찌개"
                     android:textSize="19sp" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageView5"
-                    android:layout_width="24dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="0.1"
-                    app:srcCompat="@drawable/bookmark" />
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/button_selector" />
             </LinearLayout>
 
             <TextView
