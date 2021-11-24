@@ -3,6 +3,7 @@ package com.example.coo_eat
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Typeface
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
@@ -38,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        password.setTypeface(Typeface.DEFAULT);
         auth = Firebase.auth
         val TAG:String = "MainActivity : " //log출력을 위한 TAG
 
