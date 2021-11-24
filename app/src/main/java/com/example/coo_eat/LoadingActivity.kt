@@ -23,7 +23,7 @@ class LoadingActivity : AppCompatActivity() {
         }, DURATION)
     }
     companion object {
-        private const val DURATION : Long = 6000
+        private const val DURATION : Long = 3000
     }
 
     override fun onBackPressed() {
