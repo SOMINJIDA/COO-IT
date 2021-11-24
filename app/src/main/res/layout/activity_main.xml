@@ -8,7 +8,9 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/btn_main_refrigerator"
+        android:background="@android:color/transparent"
         android:layout_width="209dp"
         android:layout_height="226.98dp"
         android:layout_marginLeft="98dp"

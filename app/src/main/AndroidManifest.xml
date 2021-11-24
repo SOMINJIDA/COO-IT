@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Coo_eat">
         <activity
+            android:name=".IngredientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".Category4Activity"
             android:exported="false" />
         <activity
@@ -19,11 +25,10 @@
             android:name=".Category2Activity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoadingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,6 +46,9 @@
             android:exported="true" />
         <activity
             android:name=".Category1Activity"
+            android:exported="true" />
+        <activity
+            android:name=".DetailActivity"
             android:exported="true" />
     </application>
 
