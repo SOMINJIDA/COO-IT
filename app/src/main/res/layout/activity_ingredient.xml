@@ -78,14 +78,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_vegan_3"
+<<<<<<< HEAD
                 android:orientation="horizontal"></LinearLayout>
+=======
+                android:orientation="horizontal">
+            </LinearLayout>
+>>>>>>> 7a19ca65006a75bf0f788c86f09f50060993193e
             <TextView
                 android:id="@+id/ingredient_meat"
                 android:layout_below="@+id/btn_vegan_4"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:text="육류"
                 android:textColor="#24434C"
                 android:textSize="20dp"
@@ -111,7 +116,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:text="가공식품"
                 android:textColor="#24434C"
                 android:textSize="20dp"
@@ -129,7 +134,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:text="유제품"
                 android:textColor="#24434C"
                 android:textSize="20dp"
@@ -147,7 +152,7 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:text="해산물"
                 android:textColor="#24434C"
                 android:textSize="20dp"
@@ -168,16 +173,17 @@
                 android:orientation="horizontal">
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/btn_ingredient_complete"
-                android:layout_below="@+id/btn_fish2"
-                android:layout_marginLeft="135dp"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_fish2"
+                android:layout_marginLeft="135dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#626d98"
-                android:textStyle="bold"
-                android:text="선택완료">
+                android:text="선택완료"
+                android:textStyle="bold">
             </Button>
         </RelativeLayout>
     </ScrollView>
