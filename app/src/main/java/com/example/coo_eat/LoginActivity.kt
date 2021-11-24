@@ -1,7 +1,9 @@
 package com.example.coo_eat
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
@@ -20,6 +22,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth //firebase 인스턴스 선언
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     val db = Firebase.firestore
 
@@ -59,6 +63,13 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(emailText, passwordText).addOnCompleteListener(this) { task ->
 
                 if (task.isSuccessful) {
+
+                    val pref = getSharedPreferences("pref",0)
+                    val edit = pref.edit()  //수정모드
+
+                    edit.putString("email",emailText)
+                    edit.apply()
+
 
                     //todo: 밑에 코드 세개 재료화면에 적용하기
                     db.collection(emailText).document("ingredient").update("양파",true)
