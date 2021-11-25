@@ -58,7 +58,7 @@ class JoinActivity : AppCompatActivity() {
 
                 if (task.isSuccessful) {
 //                        // 신규가입성공
-//
+
                         db.collection(newEmailText).document("ingredient").set(data)
                             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
                             .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
