@@ -31,35 +31,26 @@ class MainActivity : AppCompatActivity() {
         val user_email = pref.getString("email", "no email")
         val user_ingredients = db.collection("${user_email}").document("ingredient")
 
-        user_ingredients.get()
-            .addOnSuccessListener { document ->
-                if (document != null) {
-                    android.util.Log.d(TAG, "User's Ingredients: ${document.data}")
-                } else {
-                    android.util.Log.d(TAG, "No such document")
-                }
-            }
-            .addOnFailureListener { exception ->
-                android.util.Log.d(TAG, "get failed with ", exception)
-            }
-
-
 
         btn_cook.setOnClickListener {
-//            val intent = Intent(this, IngredientActivity::class.java)
-//            startActivity(intent)
-            if(user_ingredients != null) {
-                val intent = Intent(this, RecipeActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
-            }
-            else {
-                val intent = Intent(this, IngredientActivity::class.java)
-                startActivity(intent)
-            }
-//            val intent = Intent(this, RecipeActivity::class.java)
-//            startActivity(intent)
-//            Toast.makeText(this, user_ingredients.toString(), Toast.LENGTH_SHORT).show()
+            user_ingredients.get()
+                .addOnSuccessListener { document ->
+                    val item = document["my"].toString().replace("[","").replace("]","").split(",")
+                    if(item.size > 1) {
+                        val intent = Intent(this, RecipeActivity::class.java)
+                        startActivity(intent)
+                        android.util.Log.d(TAG, "재료 나왔다 *^^* : ${item.size}")
+                        Toast.makeText(this, "성공", Toast.LENGTH_SHORT).show()
+                    }
+                    else {
+                        val intent = Intent(this, IngredientActivity::class.java)
+                        startActivity(intent)
+                        android.util.Log.d(TAG, "재료 나왔다 *^^* : ${item.size}")
+                        Toast.makeText(this, "실패", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+
         }
         btn_main_refrigerator.setOnClickListener{
             val intent= Intent(this,IngredientActivity::class.java)
