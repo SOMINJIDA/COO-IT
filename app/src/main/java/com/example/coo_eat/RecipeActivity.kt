@@ -11,15 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_recipe.*
 
-val uri1 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/soup")
-val uri2 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/noodle")
-val uri3 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/maratang")
-
-var ItemList = arrayListOf<RecipeData>(
-    RecipeData("된장찌개", "#국/찌개", uri1),
-    RecipeData("라면", "#국/찌개", uri2),
-    RecipeData("마라탕", "#국/찌개", uri3),
-)
 
 class RecipeActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
@@ -42,12 +33,17 @@ class RecipeActivity : AppCompatActivity() {
 
         // 재료 배열로 받아옴
         user_ingredients.get()
-            .addOnSuccessListener { document ->
-                if (document != null) {
-                    val item = document["my"]
-                    Log.d(TAG, "재료 나왔다 *^^* : ${item}")
-                }
-            }
+           .addOnSuccessListener { document ->
+               if (document != null) {
+                   val item = document["my"]
+                   Log.d(TAG, "재료 나왔다 *^^* : ${item}")
+               }
+           }
+        // 상세페이지 버튼 클릭
+        btn_recipe_food1.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
 
         // 뒤로가기 버튼 클릭
         btn_recipe_back.setOnClickListener{
@@ -78,11 +74,6 @@ class RecipeActivity : AppCompatActivity() {
             val intent= Intent(this, Category4Activity::class.java)
             startActivity(intent)
         }
-        val mAdapter = recipeAdapter(this, ItemList)
-        recycler_view.adapter = mAdapter
 
-        val layout = LinearLayoutManager(this)
-        recycler_view.layoutManager = layout
-        recycler_view.setHasFixedSize(true)
     }
 }
