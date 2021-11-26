@@ -22,6 +22,11 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
+        recipe_today_title.setOnClickListener{
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
         // 뒤로가기 버튼 클릭
         btn_recipe_back.setOnClickListener{
             val intent= Intent(this, MainActivity::class.java)

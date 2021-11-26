@@ -29,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="555dp"
         android:layout_below="@+id/recipe_header">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -41,15 +42,14 @@
                 android:layout_marginTop="10dp"
                 android:text="오늘의 요리는!"
                 android:textColor="#000000"
-                android:textSize="20sp">
-            </TextView>
+                android:textSize="20sp"></TextView>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="505dp"
                 android:layout_below="@+id/recipe_today_title"
-                android:layout_marginTop="15dp">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginTop="15dp"></androidx.recyclerview.widget.RecyclerView>
 
             <TextView
                 android:id="@+id/recipe_category_title"
@@ -60,8 +60,8 @@
                 android:layout_marginTop="10dp"
                 android:text="카테고리별 레시피"
                 android:textColor="#000000"
-                android:textSize="20sp">
-            </TextView>
+                android:textSize="20sp"></TextView>
+
             <LinearLayout
                 android:id="@+id/recipe_category_btn"
                 android:layout_width="match_parent"
@@ -69,6 +69,7 @@
                 android:layout_below="@+id/recipe_category_title"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/btn_recipe_soup"
                     android:layout_width="60dp"
@@ -76,8 +77,8 @@
                     android:layout_marginLeft="40dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/recipe_soup">
-                </ImageButton>
+                    android:src="@drawable/recipe_soup"></ImageButton>
+
                 <ImageButton
                     android:id="@+id/btn_recipe_rice"
                     android:layout_width="60dp"
@@ -85,8 +86,8 @@
                     android:layout_marginLeft="30dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/recipe_rice">
-                </ImageButton>
+                    android:src="@drawable/recipe_rice"></ImageButton>
+
                 <ImageButton
                     android:id="@+id/btn_recipe_vegan"
                     android:layout_width="60dp"
@@ -94,8 +95,8 @@
                     android:layout_marginLeft="30dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/recipe_vegan">
-                </ImageButton>
+                    android:src="@drawable/recipe_vegan"></ImageButton>
+
                 <ImageButton
                     android:id="@+id/btn_recipe_snack"
                     android:layout_width="60dp"
@@ -103,48 +104,48 @@
                     android:layout_marginLeft="30dp"
                     android:background="@android:color/transparent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/recipe_snack">
-                </ImageButton>
+                    android:src="@drawable/recipe_snack"></ImageButton>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/recipe_category_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_below="@+id/recipe_category_btn"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="45dp"
                     android:text="국/찌개"
                     android:textColor="#000000"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="65dp"
                     android:text="밥"
                     android:textColor="#000000"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="75dp"
                     android:text="반찬"
                     android:textColor="#000000"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
                     android:text="후식"
                     android:textColor="#000000"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
