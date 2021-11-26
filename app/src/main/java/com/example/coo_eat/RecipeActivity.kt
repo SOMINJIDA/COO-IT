@@ -34,6 +34,11 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
+        recipe_today_title.setOnClickListener{
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
         val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
         val user_email = pref.getString("email", "no email")
         val user_ingredients = db.collection("${user_email}").document("ingredient")
