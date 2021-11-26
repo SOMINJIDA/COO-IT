@@ -78,14 +78,17 @@ class IngredientActivity : AppCompatActivity() {
 
 //                    var getEmail = pref.getString("email","")
 //                    Log.d(TAG,getEmail.toString())
-                    ingredientDB.update(i,true) //재료 db 추가
+
+                    ingredientDB.update("my",FieldValue.arrayUnion(i))
+
+//                    ingredientDB.update(i,true) //재료 db 추가
                 }
                 else {
                     btn_check = false
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_gray)
 
                 }
@@ -116,7 +119,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -124,7 +127,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -153,7 +156,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -161,7 +164,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -190,7 +193,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -198,7 +201,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -227,7 +230,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -235,7 +238,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -264,7 +267,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -272,7 +275,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -301,7 +304,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -309,7 +312,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -338,7 +341,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -346,7 +349,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -375,7 +378,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -383,7 +386,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i)) //재료 db 삭제
                 }
             }
         }
@@ -411,7 +414,7 @@ class IngredientActivity : AppCompatActivity() {
                 if (!btn_check) {
                     newButton.background = resources.getDrawable(R.drawable.ingredient_btn_navy)
                     btn_check = true
-                    ingredientDB.update(i,true) //재료 db 추가
+                    ingredientDB.update("my",FieldValue.arrayUnion(i)) //재료 db 추가
                 }
                 else {
                     btn_check = false
@@ -419,7 +422,7 @@ class IngredientActivity : AppCompatActivity() {
                     val updates = hashMapOf<String, Any>(
                         i to FieldValue.delete()
                     )
-                    ingredientDB.update(updates) //재료 db 삭제
+                    ingredientDB.update("my",FieldValue.arrayRemove(i))//재료 db 삭제
                 }
             }
         }

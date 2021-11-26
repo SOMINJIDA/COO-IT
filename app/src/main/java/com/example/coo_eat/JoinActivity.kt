@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_join.*
@@ -50,14 +51,17 @@ class JoinActivity : AppCompatActivity() {
 
 
 
-            val data = hashMapOf(".." to true) //문서 빈 데이터 넣기
-
+            data class My (
+                val my: List<String>? = null
+                    )
 
             //신규사용자추가
             auth.createUserWithEmailAndPassword(newEmailText, newPasswordText).addOnCompleteListener { task ->
 
                 if (task.isSuccessful) {
 //                        // 신규가입성공
+
+                        val data = My(listOf(".."))
 
                         db.collection(newEmailText).document("ingredient").set(data)
                             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
