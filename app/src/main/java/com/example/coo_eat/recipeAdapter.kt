@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +17,7 @@ class recipeAdapter(private val context: Context, private val ItemList: ArrayLis
     }
 
     inner class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val foodPhoto = itemView.findViewById<ImageView>(R.id.foodImg)
+        private val foodPhoto = itemView.findViewById<ImageButton>(R.id.foodImg)
         private val foodName = itemView.findViewById<TextView>(R.id.foodName)
         private val foodCategory = itemView.findViewById<TextView>(R.id.foodCategory)
 
