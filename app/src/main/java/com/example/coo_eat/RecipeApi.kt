@@ -1,18 +1,20 @@
 package com.example.coo_eat
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.annotation.RequiresApi
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
 import org.w3c.dom.Element
-import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
+
 
 @RequiresApi(Build.VERSION_CODES.N)
 fun main() {
     val key : String = "cf8505a99bb545f8882c"
-    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/1000"
+    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/10"
     val xml : Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(url)
 
     xml.documentElement.normalize()
