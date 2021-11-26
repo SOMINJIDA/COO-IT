@@ -14,14 +14,13 @@ import javax.xml.parsers.DocumentBuilderFactory
 @RequiresApi(Build.VERSION_CODES.N)
 fun main() {
     val key : String = "cf8505a99bb545f8882c"
-    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/10"
+    val url : String = "http://openapi.foodsafetykorea.go.kr/api/" + key + "/COOKRCP01/xml/1/1000"
     val xml : Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(url)
 
     xml.documentElement.normalize()
     println("Root element : " + xml.documentElement.nodeName)
 
     val list : NodeList = xml.getElementsByTagName("row")
-    println(list)
 
     for (i in 0..list.length - 1) {
         var n : Node = list.item(i)
@@ -35,11 +34,13 @@ fun main() {
 
             val ingredients = elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent
             val ingredientsArray = ingredients.split(" ")
+            var l = ArrayList<String>()
+            l.add("달걀")
+            l.add("양파")
 
-            for (h in 0..ingredientsArray.size - 1) {
-                if ("달걀" == ingredientsArray[h]) {
-                    println("${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
-                }
+            val equal = ingredientsArray.intersect(l)
+            if (equal.size >= 2) {
+                println("추천 레시피: ${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
             }
         }
     }
