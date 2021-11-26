@@ -71,6 +71,10 @@ class JoinActivity : AppCompatActivity() {
                             .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
                             .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
 
+                        db.collection(newEmailText).document("recipe").set(data)
+                            .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                            .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+
                         Toast.makeText(baseContext, "회원가입이 완료되었습니다",
                             Toast.LENGTH_SHORT).show()
 //
