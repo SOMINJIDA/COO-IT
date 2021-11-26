@@ -8,10 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_recipe.*
 
 val uri1 : Uri = Uri.parse("android.resource://com.example.coo_eat/drawable/soup")
@@ -34,18 +31,23 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
 
+        recipe_today_title.setOnClickListener{
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
         val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
         val user_email = pref.getString("email", "no email")
         val user_ingredients = db.collection("${user_email}").document("ingredient")
 
         // 재료 배열로 받아옴
         user_ingredients.get()
-           .addOnSuccessListener { document ->
-               if (document != null) {
-                   val item = document["my"]
-                   Log.d(TAG, "재료 나왔다 *^^* : ${item}")
-               }
-           }
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    val item = document["my"]
+                    Log.d(TAG, "재료 나왔다 *^^* : ${item}")
+                }
+            }
 
         // 뒤로가기 버튼 클릭
         btn_recipe_back.setOnClickListener{
