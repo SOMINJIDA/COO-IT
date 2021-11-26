@@ -320,7 +320,7 @@ class IngredientActivity : AppCompatActivity() {
         // 유제품 버튼 동적 생성 부분입니다......
         val milk_layout1: LinearLayout = findViewById(R.id.btn_milk1)
         var milk = mutableListOf<String>(
-            "참치캔", "스팸", "옥수수캔", "소시지"
+            "요거트", "우유", "치즈", "버터"
         )
         for (i in milk) {
             var btn_check = false
