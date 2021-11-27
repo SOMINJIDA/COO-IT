@@ -34,11 +34,11 @@ fun main() {
 
             val ingredients = elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent
             val ingredientsArray = ingredients.split(" ")
-            var l = ArrayList<String>()
+            var l = mutableListOf<String>()
             l.add("달걀")
             l.add("양파")
 
-            val equal = ingredientsArray.intersect(l)
+            val equal = ingredientsArray.intersect(l.toList())
             if (equal.size >= 2) {
                 println("추천 레시피: ${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
             }
