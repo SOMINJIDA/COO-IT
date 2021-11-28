@@ -41,14 +41,22 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
+            <LinearLayout
+                android:id="@+id/scrap_recipe_main"
                 android:layout_width="match_parent"
-                android:layout_height="505dp"
-                android:layout_below="@+id/scrap_title"
-                android:layout_marginTop="15dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"></LinearLayout>
 
-            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recycler_view"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="505dp"-->
+<!--                android:layout_below="@+id/scrap_title"-->
+<!--                android:layout_marginTop="15dp">-->
+
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
         </RelativeLayout>
     </ScrollView>
     <LinearLayout
