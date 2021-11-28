@@ -33,6 +33,7 @@ class IngredientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient)
 
+
         val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
         val user_email = pref.getString("email", "no email")
 
