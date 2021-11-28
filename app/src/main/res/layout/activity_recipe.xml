@@ -53,8 +53,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
-                android:src="@drawable/recipe_food1">
-            </ImageButton>
+                android:src="@drawable/recipe_food1"></ImageButton>
             <LinearLayout
                 android:id="@+id/recipe_title1"
                 android:layout_below="@+id/btn_recipe_food1"
@@ -96,35 +95,36 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/recipe_food1">
             </ImageButton>
+
             <LinearLayout
                 android:id="@+id/recipe_title2"
-                android:layout_below="@+id/btn_recipe_food2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_recipe_food2"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/foodName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:text="된장찌개"
                     android:textColor="#000000"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:text="된장찌개">
-                </TextView>
+                    android:textStyle="bold"></TextView>
+
                 <TextView
                     android:id="@+id/foodCategory2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
                     android:background="#D1D1D1"
+                    android:text="#국/찌개"
                     android:textColor="#FFFDF5"
                     android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:text="#국/찌개">
-                </TextView>
+                    android:textStyle="bold"></TextView>
             </LinearLayout>
             <ImageButton
                 android:layout_marginTop="20dp"
