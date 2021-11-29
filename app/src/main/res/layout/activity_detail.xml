@@ -32,18 +32,16 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/detailMain"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginEnd="0dp"
                     android:layout_marginBottom="0dp"
-                    android:scaleType="fitStart"
+                    android:scaleType="fitXY"
                     app:srcCompat="@drawable/soup" />
 
-
-                <!--                todo: 사진 전부 보이게 구현-->
             </RelativeLayout>
 
             <LinearLayout
@@ -70,7 +68,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/detailCategory"
                 android:layout_width="53dp"
                 android:layout_height="21dp"
                 android:layout_marginLeft="18dp"
@@ -107,7 +105,7 @@
                 android:textSize="19sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/detailIngredient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="43dp"
@@ -132,53 +130,11 @@
                 android:text="조리방법"
                 android:textSize="19sp" />
 
-            <ImageView
-                android:id="@+id/imageView7"
+            <LinearLayout
+                android:id = "@+id/detailCooking"
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:scaleType="fitStart"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:layout_marginBottom="58dp"
-                android:gravity="center"
-                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:scaleType="fitStart"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:layout_marginBottom="58dp"
-                android:gravity="center"
-                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:scaleType="fitStart"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:layout_marginBottom="58dp"
-                android:gravity="center"
-                android:text="1. 고구마는 깨끗이 씻어서 껍질을 벗기고 4cm 정도로 잘라준다" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
 
 
         </LinearLayout>
