@@ -96,7 +96,6 @@ class RecipeActivity : AppCompatActivity() {
                         for (i in 0..item.size-1) {
                             items.add(item[i])
                         }
-                        Log.d(TAG, "재료 나왔다 *^^* : ${items}")
                     }
                 }
 
@@ -107,7 +106,6 @@ class RecipeActivity : AppCompatActivity() {
                 val xml : Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(url)
 
                 xml.documentElement.normalize()
-                println("Root element : " + xml.documentElement.nodeName)
 
                 val list : NodeList = xml.getElementsByTagName("row")
 
@@ -129,7 +127,6 @@ class RecipeActivity : AppCompatActivity() {
 
                         val equal = ingredientsArray.intersect(items.toList())
                         if (equal.size >= 2) {
-                            Log.d(TAG, "추천 레시피: ${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
                             edit.putString("name${cnt}","${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
                             edit.apply()
                             cnt++
@@ -142,7 +139,6 @@ class RecipeActivity : AppCompatActivity() {
                             var count = 1
                             while(count < 10 && elem.getElementsByTagName("MANUAL0${count}").item(0) != null) {
                                 cooking.add(elem.getElementsByTagName("MANUAL0${count}").item(0).textContent)
-                                println(elem.getElementsByTagName("MANUAL0${count}").item(0).textContent)
                                 count++
                             }
 
@@ -208,7 +204,5 @@ class RecipeActivity : AppCompatActivity() {
             intent.putStringArrayListExtra("cookings", cookings[2])
             startActivity(intent)
         }
-
-
     }
 }
