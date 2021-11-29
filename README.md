@@ -30,6 +30,7 @@ OpenAPI 를 사용함.
 <img src="https://user-images.githubusercontent.com/66251759/143870032-523376c7-d955-482b-8b77-586792724363.png" width="250"/>
 * 회원가입 형식: 이메일 형식에 맞아야 하고, 비밀번호는 6자리 이상이어야 한다.
 
+
 4. 냉장고 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png" width="250"/>
  - 냉장고 터치 -> 재료 선택 화면 (재료는 2개 이상 선택해야 레시피가 추천된다.)
