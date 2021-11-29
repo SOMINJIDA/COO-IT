@@ -42,11 +42,11 @@ OpenAPI 를 사용함.
 <img src="https://user-images.githubusercontent.com/66251759/143870229-5725105f-c694-432a-a08b-893210a4c11c.png" width="250"/>
 
 5. 상세 레시피 설명 화면
-<img src="(https://user-images.githubusercontent.com/66251759/143870337-bd4a23ca-4301-40ff-bcde-d5de028ff18f.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/66251759/143870337-bd4a23ca-4301-40ff-bcde-d5de028ff18f.png" width="250"/>
 요리 사진 아래의 스크랩버튼을 누르면 레시피가 스크랩 화면에 저장된다.
 
 6. 카테고리별 레시피 화면
-<img src="(https://user-images.githubusercontent.com/66251759/143870296-4c1d4dcc-3669-4a40-9723-86f5e5e5e44c.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/66251759/143870296-4c1d4dcc-3669-4a40-9723-86f5e5e5e44c.png" width="250"/>
 
 7. 스크랩 화면
-<img src="(https://user-images.githubusercontent.com/66251759/143870366-bc7491f2-d7ef-4faa-9495-009014aee8ab.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/66251759/143870366-bc7491f2-d7ef-4faa-9495-009014aee8ab.png" width="250"/>
