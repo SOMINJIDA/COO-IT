@@ -1,25 +1,31 @@
 # 모바일프로그래밍 4팀 프로젝트 'COO-IT'
 #### 냉장고 속 재료로 만들 수 있는 요리 레시피 추천 앱
+
 ## Introduction
 1. 자신의 냉장고에 있는 재료로 만들 수 있는 레시피를 추천해준다.
 2. 상세레시피를 통해 자세한 요리 방법과 사진들을 볼 수 있다. 
 3. 카테고리별로 나누어 음식을 추천해준다.
 4. 레시피를 스크랩할 수 있다.
+
 ## Development Environment
 + Android studio 3.1.25
 + Kotlin
 + firebase
 + firestore
+
 ## Application Version
 + Android 11.0(R)
 + Android 10.0(Q)
+
 ## API 
 OpenAPI 를 사용함. 
-<https://openapi.foodsafetykorea.go.kr/api/cf8505a99bb545f8882c/COOKRCP01/xml/1/10> 
+http://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=COOKRCP01
+
 ## Database 
 + firebase 에서 cloud firestore 사용
+
 ## Instruction
-1. 로딩 화면
+1. 로딩 화면 - delay 300 후 로그인 화면으로 이동
 <img src="https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png" width="250"/>
 
 2. 로그인 화면
@@ -29,7 +35,6 @@ OpenAPI 를 사용함.
 3. 회원가입 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870032-523376c7-d955-482b-8b77-586792724363.png" width="250"/>
 * 회원가입 형식: 이메일 형식에 맞아야 하고, 비밀번호는 6자리 이상이어야 한다.
-
 
 4. 냉장고 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png" width="250"/>
@@ -48,5 +53,5 @@ OpenAPI 를 사용함.
 6. 카테고리별 레시피 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870296-4c1d4dcc-3669-4a40-9723-86f5e5e5e44c.png" width="250"/>
 
-7. 스크랩 화면
+7. 스크랩 화면 - 내가 스크랩한 레시피가 저장되어 있음.
 <img src="https://user-images.githubusercontent.com/66251759/143870366-bc7491f2-d7ef-4faa-9495-009014aee8ab.png" width="250"/>
