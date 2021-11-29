@@ -24,7 +24,7 @@ OpenAPI 를 사용함.
 + firebase 에서 cloud firestore 사용
 ## Instruction
 1. 로딩 화면
-![image](https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png =100)
+![image](https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png =100x)
 
 2. 로그인 화면
 ![image](https://user-images.githubusercontent.com/66251759/143869936-28131e4d-f5e7-4f3f-94a2-65c6f4e344a2.png)
