@@ -25,7 +25,7 @@ http://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=
 + firebase 에서 cloud firestore 사용
 
 ## Instruction
-1. 로딩 화면 - delay 300 후 로그인 화면으로 이동
+1. 로딩 화면 - delay 3000 후 로그인 화면으로 이동
 <img src="https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png" width="250"/>
 
 2. 로그인 화면
