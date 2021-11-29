@@ -63,6 +63,7 @@
                     android:id="@+id/pick_recipe"
                     android:layout_width="22dp"
                     android:layout_height="25dp"
+                    android:scaleType="fitXY"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/button_selector" />
             </LinearLayout>
