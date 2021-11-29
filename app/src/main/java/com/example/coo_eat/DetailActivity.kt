@@ -1,6 +1,7 @@
 package com.example.coo_eat
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +37,13 @@ class DetailActivity : AppCompatActivity() {
         val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
         val user_email = pref.getString("email", "no email") //내 이메일 가져오기
 
+        //뒤로가기 버튼
+        back_btn.setOnClickListener{
+            val intent= Intent(this, RecipeActivity::class.java)
+            startActivity(intent)
+        }
+
+        //스크랩 버튼
         scrap_btn.setOnClickListener(View.OnClickListener {
             if (!check_btn) {
                 scrap_btn.setSelected(true)
@@ -50,6 +58,10 @@ class DetailActivity : AppCompatActivity() {
                 db.collection(user_email.toString()).document("scrap").update("my", FieldValue.arrayRemove(recipe_name.text.toString()))
             }
         })
+
+        //레시피 이름 가져오기
+        val thisRecipe = intent.getStringExtra("recipeName")
+        println(thisRecipe)
 
 
 

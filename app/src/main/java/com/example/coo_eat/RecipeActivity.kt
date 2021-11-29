@@ -76,14 +76,17 @@ class RecipeActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun coroutine() {
+        var foodNames = mutableListOf<String>()
+        var foodImages = mutableListOf<String>()
+        var foodCategories = mutableListOf<String>()
+        var foodIngredients = mutableListOf<String>()
+        var cookings = mutableListOf<String>()
+
         CoroutineScope(Dispatchers.Main).launch {
             val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
             val user_email = pref.getString("email", "no email")
             val user_ingredients = db.collection("${user_email}").document("ingredient")
             var items = mutableListOf<String>()
-            var foodNames = mutableListOf<String>()
-            var foodImages = mutableListOf<String>()
-            var foodCategories = mutableListOf<String>()
 
             // 재료 배열로 받아옴
             user_ingredients.get()
@@ -133,6 +136,7 @@ class RecipeActivity : AppCompatActivity() {
                             foodNames.add(elem.getElementsByTagName("RCP_NM").item(0).textContent)
                             foodImages.add(elem.getElementsByTagName("ATT_FILE_NO_MAIN").item(0).textContent)
                             foodCategories.add(elem.getElementsByTagName("RCP_PAT2").item(0).textContent)
+                            foodIngredients.add(ingredients)
                         }
                     }
                 }
@@ -161,6 +165,27 @@ class RecipeActivity : AppCompatActivity() {
             foodCategory1.setText("#" + foodCategories[0])
             foodCategory2.setText("#" + foodCategories[1])
             foodCategory3.setText("#" + foodCategories[2])
+
+
         }
+        btn_recipe_food1.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            intent.putExtra("recipeName", foodNames[0])
+            startActivity(intent)
+        }
+
+        btn_recipe_food2.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            intent.putExtra("recipeName", foodNames[1])
+            startActivity(intent)
+        }
+
+        btn_recipe_food3.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            intent.putExtra("recipeName", foodNames[2])
+            startActivity(intent)
+        }
+
+
     }
 }
