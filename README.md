@@ -24,32 +24,32 @@ OpenAPI 를 사용함.
 + firebase 에서 cloud firestore 사용
 ## Instruction
 1. 로딩 화면
-<img src="https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png" width="180"/>
+<img src="https://user-images.githubusercontent.com/66251759/143869910-3314aace-499d-45f2-ab6b-a0a7fa873071.png" width="250"/>
 
 2. 로그인 화면
-![image](https://user-images.githubusercontent.com/66251759/143869936-28131e4d-f5e7-4f3f-94a2-65c6f4e344a2.png)
-![image](https://user-images.githubusercontent.com/66251759/143870014-bc26cf01-cab4-4418-b90c-04b5fe039272.png)
+<img src="https://user-images.githubusercontent.com/66251759/143869936-28131e4d-f5e7-4f3f-94a2-65c6f4e344a2.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/66251759/143870014-bc26cf01-cab4-4418-b90c-04b5fe039272.png" width="250"/>
 
 3. 회원가입 화면
-![image](https://user-images.githubusercontent.com/66251759/143870032-523376c7-d955-482b-8b77-586792724363.png)
+<img src="https://user-images.githubusercontent.com/66251759/143870032-523376c7-d955-482b-8b77-586792724363.png" width="250"/>
 * 회원가입 형식: 이메일 형식에 맞아야 하고, 비밀번호는 6자리 이상이어야 한다.
 
 4. 냉장고 화면
-![image](https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png)
+<img src="https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png" width="250"/>
  - 냉장고 터치 -> 재료 선택 화면
- ![image](https://user-images.githubusercontent.com/66251759/143870137-b4d8f446-2a33-40c8-bb75-bff9dce68858.png)
+<img src="https://user-images.githubusercontent.com/66251759/143870137-b4d8f446-2a33-40c8-bb75-bff9dce68858.png" width="250"/>
  선택된 재료는 남색으로 표시된다.
 
  - 요리하러 가기 버튼 터치 -> 레시피 추천 화면 (선택된 재료가 없는 상태에서 요리하러 가기 버튼을 터치하면 재료 선택 화면으로 이동함)
- ![image](https://user-images.githubusercontent.com/66251759/143870203-040a70cc-6b5e-4d08-b2e2-0c38cfda2996.png)
- ![image](https://user-images.githubusercontent.com/66251759/143870229-5725105f-c694-432a-a08b-893210a4c11c.png)
+<img src="https://user-images.githubusercontent.com/66251759/143870203-040a70cc-6b5e-4d08-b2e2-0c38cfda2996.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/66251759/143870229-5725105f-c694-432a-a08b-893210a4c11c.png" width="250"/>
 
 5. 상세 레시피 설명 화면
-![image](https://user-images.githubusercontent.com/66251759/143870337-bd4a23ca-4301-40ff-bcde-d5de028ff18f.png)
+<img src="(https://user-images.githubusercontent.com/66251759/143870337-bd4a23ca-4301-40ff-bcde-d5de028ff18f.png" width="250"/>
 요리 사진 아래의 스크랩버튼을 누르면 레시피가 스크랩 화면에 저장된다.
 
 6. 카테고리별 레시피 화면
-![image](https://user-images.githubusercontent.com/66251759/143870296-4c1d4dcc-3669-4a40-9723-86f5e5e5e44c.png)
+<img src="(https://user-images.githubusercontent.com/66251759/143870296-4c1d4dcc-3669-4a40-9723-86f5e5e5e44c.png" width="250"/>
 
 7. 스크랩 화면
-![image](https://user-images.githubusercontent.com/66251759/143870366-bc7491f2-d7ef-4faa-9495-009014aee8ab.png)
+<img src="(https://user-images.githubusercontent.com/66251759/143870366-bc7491f2-d7ef-4faa-9495-009014aee8ab.png" width="250"/>
