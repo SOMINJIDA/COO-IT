@@ -43,21 +43,6 @@ class RecipeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // 추천 레시피 클릭
-        btn_recipe_food1.setOnClickListener{
-            val intent= Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
-        btn_recipe_food2.setOnClickListener{
-            val intent= Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
-        btn_recipe_food3.setOnClickListener{
-            val intent= Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
-
-
         // 뒤로가기 버튼 클릭
         btn_recipe_back.setOnClickListener{
             val intent= Intent(this, MainActivity::class.java)
