@@ -40,8 +40,6 @@ class IngredientActivity : AppCompatActivity() {
         //유저의 재료 db 접근
         val ingredientDB = db.collection("${user_email}").document("ingredient")
 
-        Log.w(TAG, "email: " + user_email) //사용자 이메일 로그 출력
-
         btn_ingredient_back.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -51,8 +49,7 @@ class IngredientActivity : AppCompatActivity() {
             val intent = Intent(this, RecipeActivity::class.java)
             startActivity(intent)
         }
-        // 야채 버튼 동적 생성 부분입니다......
-
+        // 야채 버튼 동적 생성
         val vegetable_layout1: LinearLayout = findViewById(R.id.btn_vegan_1)
         var vegetable1 = listOf<String>(
             "버섯", "마늘", "양파", "두부"
@@ -277,7 +274,7 @@ class IngredientActivity : AppCompatActivity() {
                 }
             }
         }
-        // 육류 버튼 동적 생성 부분입니다......
+        // 육류 버튼 동적 생성
         val meat_layout1: LinearLayout = findViewById(R.id.btn_meat_1)
         var meat1 = mutableListOf<String>(
             "달걀", "돼지고기", "닭고기", "소고기"
@@ -390,7 +387,7 @@ class IngredientActivity : AppCompatActivity() {
             }
         }
 
-        // 가공식품 버튼 동적 생성 부분입니다......
+        // 가공식품 버튼 동적 생성
         val pro_food_layout1: LinearLayout = findViewById(R.id.btn_pro_food1)
         var pro_food = mutableListOf<String>(
             "참치캔", "스팸", "옥수수캔", "소시지"
@@ -447,7 +444,7 @@ class IngredientActivity : AppCompatActivity() {
             }
         }
 
-        // 유제품 버튼 동적 생성 부분입니다......
+        // 유제품 버튼 동적 생성
         val milk_layout1: LinearLayout = findViewById(R.id.btn_milk1)
         var milk = mutableListOf<String>(
             "요거트", "우유", "치즈", "버터"
@@ -504,7 +501,7 @@ class IngredientActivity : AppCompatActivity() {
             }
         }
 
-        // 해산물 버튼 동적 생성 부분입니다......
+        // 해산물 버튼 동적 생성
         val fish_layout1: LinearLayout = findViewById(R.id.btn_fish1)
         var fish = mutableListOf<String>(
             "새우", "낙지", "오징어", "문어"

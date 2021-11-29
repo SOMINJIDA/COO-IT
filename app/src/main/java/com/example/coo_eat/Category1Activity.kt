@@ -46,6 +46,8 @@ class Category1Activity : AppCompatActivity() {
             var foodNames = mutableListOf<String>()
             var foodImages = mutableListOf<String>()
             var foodCategories = mutableListOf<String>()
+            var foodIngredient = mutableListOf<String>()
+            var foodCookings = mutableListOf<ArrayList<String>>()
 
             // 재료 배열로 받아옴
             user_ingredients.get()
@@ -66,7 +68,6 @@ class Category1Activity : AppCompatActivity() {
                 val xml: Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(url)
 
                 xml.documentElement.normalize()
-                println("Root element : " + xml.documentElement.nodeName)
 
                 val list: NodeList = xml.getElementsByTagName("row")
 
@@ -91,10 +92,22 @@ class Category1Activity : AppCompatActivity() {
                             Log.d(TAG, "추천 레시피: ${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
                             foodNames.add(elem.getElementsByTagName("RCP_NM").item(0).textContent)
                             foodImages.add(elem.getElementsByTagName("ATT_FILE_NO_MAIN").item(0).textContent)
-                            //foodCategories.add(elem.getElementsByTagName("RCP_PAT2").item(0).textContent)
+                            foodCategories.add(elem.getElementsByTagName("RCP_PAT2").item(0).textContent)
+                            foodIngredient.add(ingredients)
+
+                            // 조리 순서 가져오기
+                            var cooking = arrayListOf<String>()
+                            var count = 1
+                            while(count < 10 && elem.getElementsByTagName("MANUAL0${count}").item(0) != null) {
+                                cooking.add(elem.getElementsByTagName("MANUAL0${count}").item(0).textContent)
+                                count++
+                            }
+
+                            foodCookings.add(cooking)
                         }
                     }
                 }
+
             }.await()
 
             val Category1Layout: LinearLayout = findViewById(R.id.category1_main)
@@ -131,6 +144,16 @@ class Category1Activity : AppCompatActivity() {
 
                 Category1Layout.addView(foodImage)
                 Category1Layout.addView(foodName)
+
+                foodImage.setOnClickListener {
+                    val intent = Intent(this@Category1Activity, DetailActivity::class.java)
+                    intent.putExtra("recipeName", foodNames[i])
+                    intent.putExtra("recipeImage", foodImages[i])
+                    intent.putExtra("recipeCategory", foodCategories[i])
+                    intent.putExtra("recipeIngredient", foodIngredient[i])
+                    intent.putStringArrayListExtra("cookings", foodCookings[i])
+                    startActivity(intent)
+                }
             }
         }
         // 뒤로가기 버튼 클릭
