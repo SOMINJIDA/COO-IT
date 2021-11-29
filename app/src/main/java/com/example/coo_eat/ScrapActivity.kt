@@ -50,6 +50,8 @@ class ScrapActivity : AppCompatActivity() {
             var foodNames = mutableListOf<String>()
             var foodImages = mutableListOf<String>()
             var foodCategories = mutableListOf<String>()
+            var foodIngredient = mutableListOf<String>()
+            var foodCookings = mutableListOf<ArrayList<String>>()
 
             // 재료 배열로 받아옴
             user_scrap.get()
@@ -91,30 +93,27 @@ class ScrapActivity : AppCompatActivity() {
                             )
                         }
 
-//                        val ingredients = elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent
-//                        val ingredientsArray = ingredients.split(" ")
+                        val ingredients = elem.getElementsByTagName("RCP_PARTS_DTLS").item(0).textContent
+                        val ingredientsArray = ingredients.split(" ")
 
                         val recipeName = elem.getElementsByTagName("RCP_NM").item(0).textContent
 
                         if (items.size > 1) {
                             if (recipeName in items) {
-                                Log.d(
-                                    TAG,
-                                    "레시피 정보: ${
-                                        elem.getElementsByTagName("RCP_NM").item(0).textContent
-                                    }"
-                                )
-                                foodNames.add(
-                                    elem.getElementsByTagName("RCP_NM").item(0).textContent
-                                )
-                                foodImages.add(
-                                    elem.getElementsByTagName("ATT_FILE_NO_MAIN")
-                                        .item(0).textContent
-                                )
-                                foodCategories.add(
-                                    elem.getElementsByTagName("RCP_PAT2").item(0).textContent
-                                )
+                                foodNames.add(elem.getElementsByTagName("RCP_NM").item(0).textContent)
+                                foodImages.add(elem.getElementsByTagName("ATT_FILE_NO_MAIN").item(0).textContent)
+                                foodCategories.add(elem.getElementsByTagName("RCP_PAT2").item(0).textContent)
+                                foodIngredient.add(ingredients)
 
+                                // 조리 순서 가져오기
+                                var cooking = arrayListOf<String>()
+                                var count = 1
+                                while(count < 10 && elem.getElementsByTagName("MANUAL0${count}").item(0) != null) {
+                                    cooking.add(elem.getElementsByTagName("MANUAL0${count}").item(0).textContent)
+                                    count++
+                                }
+
+                                foodCookings.add(cooking)
                             }
 
                         }
@@ -136,7 +135,6 @@ class ScrapActivity : AppCompatActivity() {
                     900,
                     350,
                 )
-
                 imageLayoutParams.gravity = Gravity.CENTER
 
                 layoutParams.setMargins(80,5,0,0)
@@ -156,6 +154,16 @@ class ScrapActivity : AppCompatActivity() {
 
                 scrapMainLayout.addView(scrapImage)
                 scrapMainLayout.addView(newButton)
+
+                scrapImage.setOnClickListener {
+                    val intent = Intent(this@ScrapActivity, DetailActivity::class.java)
+                    intent.putExtra("recipeName", foodNames[i])
+                    intent.putExtra("recipeImage", foodImages[i])
+                    intent.putExtra("recipeCategory", foodCategories[i])
+                    intent.putExtra("recipeIngredient", foodIngredient[i])
+                    intent.putStringArrayListExtra("cookings", foodCookings[i])
+                    startActivity(intent)
+                }
             }
         }
 
