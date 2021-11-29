@@ -5,10 +5,6 @@
 2. 상세레시피를 통해 자세한 요리 방법과 사진들을 볼 수 있다. 
 3. 카테고리별로 나누어 음식을 추천해준다.
 4. 레시피를 스크랩할 수 있다.
-## Implementation
-+ 회원가입 형식은 이메일 형식에 맞아야하고, 비밀번호는 6자리 이상이어야한다. 
-+ 로그인 후, 냉장고를 클릭하여 재료를 선택한다.
-+ 재료를 두 개 이상 선택하면, 요리하러가기 버튼이 활성화되어 레시피화면으로 넘어간다.  
 ## Development Environment
 + Android studio 3.1.25
 + Kotlin
@@ -36,7 +32,7 @@ OpenAPI 를 사용함.
 
 4. 냉장고 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png" width="250"/>
- - 냉장고 터치 -> 재료 선택 화면
+ - 냉장고 터치 -> 재료 선택 화면 (재료는 2개 이상 선택해야 레시피가 추천된다.)
 <img src="https://user-images.githubusercontent.com/66251759/143870137-b4d8f446-2a33-40c8-bb75-bff9dce68858.png" width="250"/>
  선택된 재료는 남색으로 표시된다.
 
