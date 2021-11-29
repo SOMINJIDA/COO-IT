@@ -43,11 +43,20 @@ class RecipeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // 상세페이지 버튼 클릭
+        // 추천 레시피 클릭
         btn_recipe_food1.setOnClickListener{
             val intent= Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
+        btn_recipe_food2.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+        btn_recipe_food3.setOnClickListener{
+            val intent= Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // 뒤로가기 버튼 클릭
         btn_recipe_back.setOnClickListener{
@@ -114,6 +123,9 @@ class RecipeActivity : AppCompatActivity() {
 
                 val list : NodeList = xml.getElementsByTagName("row")
 
+                val detail_pref = getSharedPreferences("detail_pref", Context.MODE_PRIVATE)
+                val edit = detail_pref.edit()  //수정모드
+                var cnt = 0
                 for (i in 0..list.length - 1) {
                     var n : Node = list.item(i)
                     if (n.getNodeType() == Node.ELEMENT_NODE) {
@@ -130,6 +142,9 @@ class RecipeActivity : AppCompatActivity() {
                         val equal = ingredientsArray.intersect(items.toList())
                         if (equal.size >= 2) {
                             Log.d(TAG, "추천 레시피: ${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
+                            edit.putString("name${cnt}","${elem.getElementsByTagName("RCP_NM").item(0).textContent}")
+                            edit.apply()
+                            cnt++
                             foodNames.add(elem.getElementsByTagName("RCP_NM").item(0).textContent)
                             foodImages.add(elem.getElementsByTagName("ATT_FILE_NO_MAIN").item(0).textContent)
                             foodCategories.add(elem.getElementsByTagName("RCP_PAT2").item(0).textContent)
