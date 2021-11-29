@@ -18,4 +18,4 @@ OpenAPI 를 사용함.
 <https://openapi.foodsafetykorea.go.kr/api/cf8505a99bb545f8882c/COOKRCP01/xml/1/10> 
 ## Database 
 + firebase 에서 cloud firestore 사용
-## ScreenShot
+## Manual
