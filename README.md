@@ -33,11 +33,11 @@ OpenAPI 를 사용함.
 
 4. 냉장고 화면
 <img src="https://user-images.githubusercontent.com/66251759/143870056-c9193dd9-81c4-4c43-ba31-c9d9a47785c6.png" width="250"/>
- - 냉장고 터치 -> 재료 선택 화면 (재료는 2개 이상 선택해야 레시피가 추천된다.)
+ -냉장고 터치 -> 재료 선택 화면 (재료는 2개 이상 선택해야 레시피가 추천된다.)
 <img src="https://user-images.githubusercontent.com/66251759/143870137-b4d8f446-2a33-40c8-bb75-bff9dce68858.png" width="250"/>
  선택된 재료는 남색으로 표시된다.
 
- - 요리하러 가기 버튼 터치 -> 레시피 추천 화면 (선택된 재료가 없는 상태에서 요리하러 가기 버튼을 터치하면 재료 선택 화면으로 이동함)
+ -요리하러 가기 버튼 터치 -> 레시피 추천 화면 (선택된 재료가 없는 상태에서 요리하러 가기 버튼을 터치하면 재료 선택 화면으로 이동함)
 <img src="https://user-images.githubusercontent.com/66251759/143870203-040a70cc-6b5e-4d08-b2e2-0c38cfda2996.png" width="250"/>
 <img src="https://user-images.githubusercontent.com/66251759/143870229-5725105f-c694-432a-a08b-893210a4c11c.png" width="250"/>
 
